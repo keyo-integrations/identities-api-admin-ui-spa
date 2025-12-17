@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyo Identities</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+      }
+      .ki-root {
+        min-height: 100vh;
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+        padding: 24px;
+      }
+      keyo-identities-module {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ki-root">
+      <keyo-identities-module
+        data-token-url="{{TOKEN_ENDPOINT}}"
+        data-keyo-base="{{KEYO_BASE}}"
+      ></keyo-identities-module>
+    </div>
+    <script>
+      {{MODULE_SCRIPT}}
+    </script>
+  </body>
+</html>
+
