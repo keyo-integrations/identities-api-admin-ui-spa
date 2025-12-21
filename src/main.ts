@@ -8,8 +8,11 @@ import { join } from 'path';
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   
-  // Serve static files
-  app.useStaticAssets(join(__dirname, 'static'), {
+  // Serve static files from src/static (development) or dist/static (production)
+  const staticPath = process.env.NODE_ENV === 'production' 
+    ? join(__dirname, 'static')
+    : join(process.cwd(), 'src', 'static');
+  app.useStaticAssets(staticPath, {
     prefix: '/static/',
   });
   

@@ -1,12 +1,12 @@
 # Keyo Identities Admin
 
-Admin tool for managing Keyo identities.
+A low or no code, rapidly deployable tool to easily manage Keyo identity accounts. This tool is mobile friendly and can be cloned for customization and deployment to your stack as needed, or follow our guide to deploy for free on platforms like Replit and Railway.
 
 ## What You Need To Setup
 
-1. KEYO_AUTH_TOKEN - Your Keyo API token
-2. USERS - Login credentials (JSON format: email -> password)
-3. KEYO_ORG_ID - (Optional) Your Keyo organization ID (for future use)
+1. KEYO_ORG_ID - Log into the Keyo Admin Dashboard to retrieve the org id (in the url)
+2. KEYO_AUTH_TOKEN - Log into the Keyo Admin Dashboard to retrieve a token [as shown in the developer docs](https://developers.keyo.co/rest-api/authentication#id-1.-obtaining-client-credentials)
+3. USERS - Add users (email / password) that are allowed to login (follow the steps below for a particular platform)
 
 ## Deploy on Replit
 
@@ -15,7 +15,8 @@ Admin tool for managing Keyo identities.
 3. Paste this URL: [GITHUB_REPO_URL]
 4. Wait for import to finish
 5. Click "Secrets" (lock icon)
-6. Add these 2 secrets:
+6. Add these secrets:
+   - KEYO_ORG_ID = [org id]
    - KEYO_AUTH_TOKEN = [your token]
    - USERS = {"user@example.com":"password1","admin@example.com":"password2"}
 7. Click "Run"
@@ -29,7 +30,8 @@ Admin tool for managing Keyo identities.
 3. Click "Deploy from GitHub repo"
 4. Select your GitHub account
 5. Select this repository
-6. Click "Add Variable" 2 times:
+6. Click "Add Variable" 3 times:
+   - KEYO_ORG_ID = [org id]
    - KEYO_AUTH_TOKEN = [your token]
    - USERS = {"user@example.com":"password1","admin@example.com":"password2"}
 7. Wait for deploy (2-3 minutes)
