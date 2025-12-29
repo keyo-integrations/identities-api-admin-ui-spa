@@ -66,31 +66,3 @@ In the "Secrets" or .env file, USERS must be added in JSON format with email as 
 
 Example:
 {"admin@example.com":"secret123","user@example.com":"pass456"}
-
-
-
-
-## Appendix: Changing Keyo API Base URL
-
-The Keyo API base URL is hardcoded in the source code for easy configuration.
-
-To change it:
-
-1. Open `src/config.ts`
-2. Update the `KEYO_API_BASE` constant:
-
-```typescript
-export const KEYO_API_BASE = 'https://your-keyo-api-url.com';
-```
-
-3. Rebuild and restart the server:
-   ```bash
-   npm run build
-   npm start
-   ```
-
-Examples:
-- Production: `https://api.keyo.com`
-- Staging: `https://api-staging.keyo.com`
-- Custom: `https://your-keyo-instance.com`
-
